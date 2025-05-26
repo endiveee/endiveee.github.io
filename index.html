@@ -207,11 +207,14 @@
             <div class="tab-content" id="leaderboardTabContent">
               <div class="tab-pane fade show active" id="accuracy-content" role="tabpanel" aria-labelledby="accuracy-tab">
                 <div class="table-wrapper" style="overflow-x: auto;">
-              <table class="table table-striped table-bordered" id="accuracy-table" style="font-size: 0.9em;">
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col" rowspan="2" class="align-middle text-center" style="min-width: 120px;">Model</th>
-                    <th scope="col" colspan="2" class="text-center">AAVE</th>
+                  <p style="margin-top: 1em;">
+This table compares how accurately different language models perform on Standard American English (SAE) versus various English dialects. Each column represents a specific dialect, and the scores reflect model performance when prompted in that dialect using chain-of-thought (CoT) reasoning. Significant drops in performance on dialects like African American English (AAVE) or Jamaican English (JamE), compared to SAE, indicate potential biases and reduced effectiveness. These disparities highlight the need to evaluate and improve AI fairness across diverse language varieties.
+</p>
+                  <table class="table table-striped table-bordered" id="accuracy-table" style="font-size: 0.9em;">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col" rowspan="2" class="align-middle text-center" style="min-width: 120px;">Model</th>
+                        <th scope="col" colspan="2" class="text-center">AAVE</th>
                     <th scope="col" colspan="2" class="text-center">ChcE</th>
                     <th scope="col" colspan="2" class="text-center">CollSgE</th>
                     <th scope="col" colspan="2" class="text-center">IndE</th>
@@ -367,7 +370,7 @@
                       <li><strong>Logic:</strong> LogicBench, FOLIO</li>
                     </ul>
                     
-                    <p><strong>Dialect Translation:</strong> Using few-shot prompting with GPT-4o and verified examples from <a href="https://ewave-atlas.org/" target="_blank">eWAVE</a> (Kortmann et al., 2020), tasks are translated from SAE to target dialects while preserving sociolinguistic nuance. Example prompts include:</p>
+                    <p><strong>Dialect Translation:</strong> Using few-shot prompting with GPT-4o and verified examples from <a href="https://ewave-atlas.org/" target="_blank">eWAVE</a> (Kortmann et al., 2020), tasks are translated from SAE to target dialects while preserving sociolinguistic nuance.</p>
 
                     
                     <p><strong>Quality Filtering:</strong> To eliminate superficial transformations, BLEU-based filtering removes translations with scores ≥0.7 against their SAE sources—retaining only substantive linguistic variations that challenge LLMs' dialect understanding.</p>
@@ -417,18 +420,6 @@
                           <tr>
                             <td>CollSgE</td>
                             <td>6.19</td>
-                            <td>6.11</td>
-                            <td>6.02</td>
-                            <td>6.52</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <p class="small text-muted">Table 1: Native speaker evaluation scores (1-7 scale), showing high quality across all metrics.</p>
-                  </div>
-                  
-                  <div class="mb-4">
-                    <h5 style="color: #21807a;">Key Findings</h5>
                     
                     <p><strong>Performance Gaps:</strong> All seven models (including top-tier systems like o1 and Gemini 2.5 Pro) demonstrate consistent performance drops when evaluated on dialectal inputs compared to SAE prompts. The average gap ranges from 2.69% to over 12.37%.</p>
                     
