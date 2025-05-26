@@ -246,6 +246,7 @@ span.line {
 .btn-a {
   background: #34314c;
   color: #fff;
+  border-radius: 50px;
 }
 
 .btn-b {
