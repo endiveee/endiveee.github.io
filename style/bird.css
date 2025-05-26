@@ -1,7 +1,7 @@
 header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
-    padding: 50px 0 75px;
+    padding: 30px 0 40px;
 }
 
 #main {
@@ -142,12 +142,20 @@ span.line {
 }
 
 #bird-title {
-    color: #9de2dd
+    color: #6fcf97;
+    font-weight: 900;
+    font-size: 4rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+#caption {
+    color: #ffffff;
 }
 
 #logo-img {
     display: inline;
-    max-height: 200px;
+    max-height: 260px;
     cursor: pointer;
     transition: all 0.6s;
 }
@@ -211,7 +219,6 @@ span.line {
 }
 
 #header-color {
-    /* background-color: #7C499D; */
     background-color: #53595F;
 }
 
@@ -226,21 +233,24 @@ span.line {
     padding: 5px;
 }
 
+.btn {
+  border-radius: 25px;
+  padding: 10px 0px;
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  width: 100%;
+  transition: background 0.2s, color 0.2s, transform 0.18s cubic-bezier(0.4, 0.2, 0.2, 1), box-shadow 0.18s cubic-bezier(0.4, 0.2, 0.2, 1), filter 0.18s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
 .btn-a {
-    color: #fff;
-    font-weight: 400;
-    width: 100%;
-    text-transform: none;
-    background-color: #34314c;
+  background: #34314c;
+  color: #fff;
 }
 
 .btn-b {
-    color: #fff;
-    font-weight: 400;
-    width: 100%;
-    text-transform: none;
-    background-color: #1F7872;
-    border-radius: 50px;
+  background: #1F7872;
+  color: #fff;
 }
 
 .btn-d {  
